@@ -1,0 +1,210 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: rgb(206, 36, 36);
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+/* Home Section */
+#home {
+    background-image: url('/CCMCL/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(17, 236, 72);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* About Section */
+#about {
+    background-image: url(/CCMCL/reviews-bg.jpg);
+    padding: 4rem 0;
+}
+
+/* Destinations Section */
+#destinations {
+    background-color: aqua;
+    padding: 4rem 0;
+}
+
+.destination-card {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.destination-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.destination-card h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.destination-card p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Additional CSS for mixed horizontal and vertical display */
+.destination-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 2rem;
+}
+
+/* Gallery Section */
+#gallery {
+    background-image: url(/CCMCL/destination-bg.jpg);
+    padding: 4rem 0;
+  }
+  
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .image-gallery img {
+    max-width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-gallery img:hover {
+    opacity: 0.8;
+  }
+  
+  .image-wrapper {
+    position: relative;
+  }
+  
+  .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  
+  .image-wrapper:hover .caption {
+    opacity: 1;
+  }
+  
+/* Contact Section */
+#contact {
+    background-image: url(/CCMCL/contact-bg.jpg);
+    color: rgb(143, 19, 46);
+    padding: 4rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+input, textarea {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+}
